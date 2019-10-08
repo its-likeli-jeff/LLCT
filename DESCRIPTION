@@ -1,0 +1,9 @@
+Package: LLCT
+Type: Package
+Title: Longitudinal linear combination test for analyzing multiple longitudinal phenotypes in high dimensions
+Version: 0.1
+Date: 2019-10-08
+Author: Elham Khodayari Moez, Irina Dinu, Jeffrey L. Andrews
+Maintainer: Elham Khodayari Moez <email@address.com>
+Description: More about what it does (maybe more than one line)
+License: GPL-3
