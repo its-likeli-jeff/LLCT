@@ -1,6 +1,6 @@
 Package: LLCT
 Type: Package
-Title: Longitudinal linear combination test for analyzing multiple longitudinal phenotypes in high dimensions
+Title: Longitudinal Linear Combination Test for Gene set Analysis
 Version: 0.1
 Date: 2019-10-08
 Authors@R: c(
@@ -10,7 +10,7 @@ Authors@R: c(
     person("Irina","Dinu",role=c("aut"))
     )
 Maintainer: Elham Khodayari Moez <ekhodaya@ualberta.ca>
-Description: More about what it does (maybe more than one line)
+Description: This package helps coducting gene-set enrichment analyses in longitudinal studies. LLCT is a two-step method to analyze multiple longitudinal phenotypes when there is high dimensionality in either the response or explanatory variables. It is also applicable to anlayze time-course microaaray data. 
 License: GPL-3
 Imports:
 stringr,
