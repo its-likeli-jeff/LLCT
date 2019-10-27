@@ -1,4 +1,4 @@
-load ("data_LLCT.rda")
+After loadind data_LLCT.rda:
 
 #LLCT for unrelated subjects with two time variables (time and time2) defining phenotypic temppral patterns
 LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time","time2"), covariate=NULL,phenotype="phenotype",familybased=FALSE,pedigree=NULL,FIX.formula="phenotype~time+time2", RANDOM.formula=NULL,nbPermutations=1000)
