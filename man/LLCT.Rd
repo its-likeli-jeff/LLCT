@@ -6,6 +6,7 @@
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
+  LLCT is a two-step self-contained gene-set analysis method which is developed to handle multiple longitudinal outcomes. Analysis of within-subject variation in the first step is followed by examining the between-subject variation utilizing Linear Combination Test (LCT) in the second step. This method is also applicable in analysis of time-course microarray data.
 }
 \usage{
 LLCT(EXPR, GS, LongData, ID = "ID", time = "time", covariate = NULL, phenotype = "phenotype", familybased = FALSE, pedigree = NULL, FIX.formula = "phenotype~time+covariate", RANDOM.formula = "~1|ID", nbPermutations = 1000, family = "gaussian(link=identity)")
