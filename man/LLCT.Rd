@@ -15,6 +15,7 @@ LLCT(EXPR, GS, LongData, ID = "ID", time = "time", covariate = NULL, phenotype =
 \arguments{
   \item{EXPR}{
 %%     ~~Describe \code{EXPR} here~~
+Gene Expressions --- Row names:Subjects (single row per subject); Col names: Genes names. Note: The rownames of GS must be matched with colnames of EXPR and the unique values of the rownames of LongData must be matched with the rownames of EXPR.   
 }
   \item{GS}{
 %%     ~~Describe \code{GS} here~~
