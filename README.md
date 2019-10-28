@@ -5,5 +5,7 @@ LLCT is a two-step self-contained gene-set analysis method which is developed to
 
 # 2. Installation
 library(devtools)
+
 install_github("ekhodaya/LLCT")
+
 library(LLCT)
