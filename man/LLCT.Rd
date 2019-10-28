@@ -1,7 +1,7 @@
 \name{LLCT}
 \alias{LLCT}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
+\title{ Longitudinal Linear Combination Test for Gene Set Analysis
 %%  ~~function to do ... ~~
 }
 \description{
