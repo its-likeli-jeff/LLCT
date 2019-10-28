@@ -1,6 +1,5 @@
 \name{LLCT-package}
 \alias{LLCT-package}
-\alias{LLCT}
 \docType{package}
 \title{
 \packageTitle{LLCT}
