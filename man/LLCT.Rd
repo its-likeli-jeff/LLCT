@@ -1,11 +1,10 @@
 \name{LLCT}
 \alias{LLCT}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ Longitudinal Linear Combination Test for Gene Set Analysis
-%%  ~~function to do ... ~~
+\title{ 
+  Longitudinal Linear Combination Test for Gene Set Analysis
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
   LLCT is a two-step self-contained gene-set analysis method which is developed to handle multiple longitudinal outcomes. Analysis of within-subject variation in the first step is followed by examining the between-subject variation utilizing Linear Combination Test (LCT) in the second step. This method is also applicable in analysis of time-course microarray data.
 }
 \usage{
@@ -14,30 +13,28 @@ LLCT(EXPR, GS, LongData, ID = "ID", time = "time", covariate = NULL, phenotype =
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{EXPR}{
-%%     ~~Describe \code{EXPR} here~~
 Gene Expressions --- Row names:Subjects (single row per subject); Col names: Genes names. Note: The rownames of GS must be matched with colnames of EXPR and the unique values of the rownames of LongData must be matched with the rownames of EXPR.   
 }
   \item{GS}{
-%%     ~~Describe \code{GS} here~~
     Gene Set Matrix --- Row names: list of genes; Col names: list of selected gene sets; Cells: 1 (if gene of the row belongs to the gene set of the column) 0 (otherwise). Note: The rownames of GS must be matched with colnames of EXPR
 }
   \item{LongData}{
-%%     ~~Describe \code{LongData} here~~
+Phenotypes and Covariates Data in Longitudinal format
 }
   \item{ID}{
-%%     ~~Describe \code{ID} here~~
+Name of ID variable in LongData
 }
   \item{time}{
-%%     ~~Describe \code{time} here~~
+Vector of the names of time variables in LongData
 }
   \item{covariate}{
-%%     ~~Describe \code{covariate} here~~
+name of covariate(s) in LongData
 }
   \item{phenotype}{
-%%     ~~Describe \code{phenotype} here~~
+ name of phenotype in LongData
 }
   \item{familybased}{
-%%     ~~Describe \code{familybased} here~~
+TRUE/FALSE indicating if the subjects are sharing families/pedigress Defaults to FALSE
 }
   \item{pedigree}{
 %%     ~~Describe \code{pedigree} here~~
