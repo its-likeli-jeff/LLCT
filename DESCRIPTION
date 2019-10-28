@@ -12,14 +12,4 @@ Authors@R: c(
 Maintainer: Elham Khodayari Moez <ekhodaya@ualberta.ca>
 Description: This package helps coducting gene-set enrichment analyses in longitudinal studies. LLCT is a two-step method to analyze multiple longitudinal phenotypes when there is high dimensionality in either the response or explanatory variables. It is also applicable to anlayze time-course microaaray data. 
 License: GPL-3
-Imports:
-stringr,
-corpcor,
-qvalue,
-splines,
-gtools,
-reshape,
-plyr,
-nlme,
-Matrix,
-lme4
+Imports: stringr, corpcor, qvalue, splines, gtools, reshape, plyr, nlme, Matrix, lme4
