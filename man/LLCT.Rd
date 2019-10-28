@@ -37,19 +37,19 @@ name of covariate(s) in LongData
 TRUE/FALSE indicating if the subjects are sharing families/pedigress Defaults to FALSE
 }
   \item{pedigree}{
-%%     ~~Describe \code{pedigree} here~~
+name of pedigree variable in LongData
 }
   \item{FIX.formula}{
-%%     ~~Describe \code{FIX.formula} here~~
+Formula of Phenotype~time model Defaults to "phenotype~time+covariate"
 }
   \item{RANDOM.formula}{
-%%     ~~Describe \code{RANDOM.formula} here~~
+Formula of random effects as lme function requires - required in case of related subjects Defaults to NULL
 }
   \item{nbPermutations}{
-%%     ~~Describe \code{nbPermutations} here~~
+Number of Permutations Defaults to 1000
 }
   \item{family}{
-%%     ~~Describe \code{family} here~~
+family of link function appropriate for the type of phenotype
 }
 }
 \details{
@@ -58,8 +58,8 @@ TRUE/FALSE indicating if the subjects are sharing families/pedigress Defaults to
 \value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
+\item{LLCT_Results}{geneset-specific p-values and q-values}
+\item{Step1_Coefs}{coefficients calculated in the first step using FIX_formula}
 %% ...
 }
 \references{
