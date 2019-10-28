@@ -17,6 +17,7 @@ LLCT(EXPR, GS, LongData, ID = "ID", time = "time", covariate = NULL, phenotype =
 }
   \item{GS}{
 %%     ~~Describe \code{GS} here~~
+    Gene Set Matrix --- Row names: list of genes; Col names: list of selected gene sets; Cells: 1 (if gene of the row belongs to the gene set of the column) 0 (otherwise). Note: The rownames of GS must be matched with colnames of EXPR
 }
   \item{LongData}{
 %%     ~~Describe \code{LongData} here~~
@@ -81,7 +82,7 @@ LLCT(EXPR, GS, LongData, ID = "ID", time = "time", covariate = NULL, phenotype =
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,
 ##--	or do  help(data=index)  for the standard data sets.
-
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
