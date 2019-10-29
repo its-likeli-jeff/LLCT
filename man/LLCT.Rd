@@ -78,7 +78,7 @@ family of link function appropriate for the type of phenotype
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-data(data_LLCT)
+data(data_for_LLCT)
 
 #LLCT for unrelated subjects with two more complex time trend
 LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time","time2"), covariate=NULL,phenotype="phenotype",familybased=FALSE,pedigree=NULL,FIX.formula="~time+time2", RANDOM.formula=NULL,nbPermutations=1000)
