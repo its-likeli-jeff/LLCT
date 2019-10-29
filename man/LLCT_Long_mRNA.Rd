@@ -72,10 +72,11 @@ Number of Permutations Defaults to 1000
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-data(data_LLCT)
+data(data_for_LLCT_Long_mRNA)
 #LLCT for time-course microarray datawith two time variables (time and time2) defining phenotypic temppral patterns
-LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time","time2"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
-
+mrnarun <- LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time","time2"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
+mrnarun$LLCT_Results
+  
 #'#LLCT for time-course microarray data with a linear time trend
 #'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
 
