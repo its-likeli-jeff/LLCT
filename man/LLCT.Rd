@@ -80,26 +80,27 @@ family of link function appropriate for the type of phenotype
 \examples{
 data(data_LLCT)
 
-#LLCT for unrelated subjects with two time variables (time and time2) defining phenotypic temppral patterns 
+#LLCT for unrelated subjects with two more complex time trend
 LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time","time2"), covariate=NULL,phenotype="phenotype",familybased=FALSE,pedigree=NULL,FIX.formula="~time+time2", RANDOM.formula=NULL,nbPermutations=1000)
 
-#LLCT for unrelated subjects with a linear time trend 
+#LLCT for unrelated subjects with a linear time trend
 #LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate=NULL,phenotype="phenotype",familybased=FALSE,pedigree=NULL,FIX.formula="~time", RANDOM.formula=NULL,nbPermutations=1000)
 
-#LLCT for unrelated subjects with binary phenotype 
+#LLCT for unrelated subjects with adjustment for time dependent covariate
+#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate="covariate",phenotype="phenotype",familybased=FALSE,pedigree=NULL,FIX.formula="~time+covariate", RANDOM.formula=NULL,nbPermutations=1000)
+
+#LLCT for unrelated subjects with binary phenotype
 #LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate=NULL,phenotype="binary.phenotype",familybased=FALSE,pedigree=NULL,FIX.formula="~time", RANDOM.formula=NULL,nbPermutations=1000,family="binomial(link=logit)")
 
-#LLCT for unrelated subjects with adjustment for time dependent covariate
-#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate="covariate",phenotype="phenotype",familybased=TRUE,pedigree="pedigree",FIX.formula="~time+covariate", RANDOM.formula="~1|ID",nbPermutations=1000)
+#LLCT for related subjects with adjustment for time dependent covariate
+#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate="covariate",phenotype="phenotype",familybased=FALSE,pedigree="pedigree",FIX.formula="~time+covariate", RANDOM.formula="~1|ID",nbPermutations=1000)
 
-#LLCT for related subjects with adjustment for time dependent covariate 
-#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate="covariate",phenotype="phenotype",familybased=TRUE,pedigree="pedigree",FIX.formula="~time+covariate", RANDOM.formula="~1|ID",nbPermutations=1000)
+#LLCT for related subjects with adjustment for more complex time trend
+#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time","time2"), covariate="covariate",phenotype="phenotype",familybased=FALSE,pedigree="pedigree",FIX.formula="~time+time2", RANDOM.formula="~1|ID",nbPermutations=1000)
 
-#LLCT for related subjects with adjustment for more complex time trend 
-#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time","time2"), covariate="covariate",phenotype="phenotype",familybased=TRUE,pedigree="pedigree",FIX.formula="~time+time2", RANDOM.formula="~1|ID",nbPermutations=1000)
+#LLCT for unrelated subjects with two phenotypes
+#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate=NULL,phenotype=c("phenotype","phenotype2"),familybased=FALSE,pedigree=NULL,FIX.formula="~time", RANDOM.formula=NULL,nbPermutations=1000)
 
-#LLCT for related subjects with binary phenotype 
-#LLCT(EXPR=EXPR, GS=GS, LongData=LongData, ID="ID",time=c("time"), covariate="covariate",phenotype="binary.phenotype",familybased=TRUE,pedigree="pedigree",FIX.formula="~time", RANDOM.formula="~1|ID",nbPermutations=1000,family="binomial(link=logit)")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
