@@ -8,7 +8,7 @@
   LLCT is a two-step self-contained gene-set analysis method which is developed to handle multiple longitudinal outcomes. Analysis of within-subject variation in the first step is followed by examining the between-subject variation utilizing Linear Combination Test (LCT) in the second step. This method is also applicable in analysis of time-course microarray data.
 }
 \usage{
-LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time","time2"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
+LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time","time2"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) \%in\% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -74,18 +74,18 @@ Number of Permutations Defaults to 1000
 \examples{
 data(data_for_LLCT_Long_mRNA)
 #LLCT for time-course microarray datawith two time variables (time and time2) defining phenotypic temppral patterns
-mrnarun <- LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time","time2"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
+mrnarun <- LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time","time2"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) \%in\% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
 mrnarun$LLCT_Results
   
 #'#LLCT for time-course microarray data with a linear time trend
-#'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
+#'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) \%in\% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
 
 
 #'#LLCT for time-course microarray data with adjustment for time dependent covariate
-#'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate="covariate", Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
+#'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate="covariate", Genes=colnames(LongEXPR)[!(colnames(LongEXPR) \%in\% c("ID","time","time2","covariate"))],phenotype="phenotype",FIX.formula="~time+time2",nbPermutations=1000)
 
 #'#LLCT for time-course microarray data with two phenotypes
-#'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) %in% c("ID","time","time2","covariate"))],phenotype=c("phenotype","phenotype2"),FIX.formula="~time+time2",nbPermutations=1000)
+#'LLCT_Long_mRNA(LongEXPR=LongEXPR, GS=GS, PhenData=PhenData, ID="ID",time=c("time"), covariate=NULL, Genes=colnames(LongEXPR)[!(colnames(LongEXPR) \%in\% c("ID","time","time2","covariate"))],phenotype=c("phenotype","phenotype2"),FIX.formula="~time+time2",nbPermutations=1000)
 
 
 }
